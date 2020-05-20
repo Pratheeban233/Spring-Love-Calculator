@@ -19,9 +19,10 @@
 </style>
 
 <script type="text/javascript">
-	function validateUserName() {
-		alert("Your Name should  have atleast 3 character");
+	function validateYourName() {
+		
 		var yname = document.getElementById('YN').value;
+		alert("Your Name should  have atleast 3 character");
 		if (yname.length < 3) {
 			return false;
 		} else {
@@ -33,11 +34,11 @@
 </head>
 <body>
 
-	<h1>WelCome To LoveCalculator</h1>
+	<h1 align="center">Welcome To LoveCalculator</h1>
 	<hr>
 	<form:form action="process-homepage" method="GET"
-		onsubmit="return validateUserName()">
-		<div>
+		modelAttribute="userInfo" >
+		<div align="center">
 			<p>
 				<label for="YN">Your Name: </label>
 				<form:input path="yourName" id="YN" />
@@ -47,13 +48,16 @@
 			<p>
 				<label for="CN">Crush Name: </label>
 				<form:input path="crushName" id="CN" />
-				<form:errors path="yourName" cssClass="error" />
+				<form:errors path="crushName" cssClass="error" />
 			</p>
 
-			<form:checkbox path="termsAndCondition" />
-			<label>I'm agree this is jsut for fun</label> <input type="submit"
-				value="Calculate">
-			<form:errors path="yourName" cssClass="error" />
+			<p>
+				<form:checkbox path="termsAndCondition" />
+				<label>I'm agree this is jsut for fun</label>
+				<form:errors path="termsAndCondition" cssClass="error" />
+			</p>
+
+			<input type="submit" value="Calculate">
 
 		</div>
 	</form:form>

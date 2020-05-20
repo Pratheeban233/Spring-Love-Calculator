@@ -27,5 +27,11 @@
 	 <br>
 	Gender:  ${userRegistrationInfo.gender } <br>
 	
+	<br>
+	<h3>Communication</h3>
+	
+	Email: ${userRegistrationInfo.communicationDTO.email}   <br> 
+	Phone: ${userRegistrationInfo.communicationDTO.phone }
+	
 </body>
 </html>

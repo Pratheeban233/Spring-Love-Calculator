@@ -15,7 +15,7 @@
 	
 	<form:form action="register"  method="GET">
 	<div align="left">
-	<p> UserName is : ${userInfo.userName}</p>
+	<p> UserName is : ${userInfo.yourName}</p>
 	<p> CrushName is :${userInfo.crushName}</p>
 	</div>
 	</form:form>
