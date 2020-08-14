@@ -7,10 +7,13 @@ import javax.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.prathi.lc.dto.UserInfoDTO;
+import com.prathi.lc.validator.UserNameValidator;
 
 @Controller
 public class LcAppController {
@@ -50,7 +53,7 @@ public class LcAppController {
 		if (result.hasErrors()) {
 			System.out.println("This form has  errors...");
 			List<ObjectError> allErrors = result.getAllErrors();
-			for(ObjectError err:allErrors)
+			for (ObjectError err : allErrors)// For each
 			{
 				System.out.println(err);
 			}
@@ -58,6 +61,11 @@ public class LcAppController {
 		}
 
 		return "result-page";
+	}
+
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+	//	binder.addValidators(new UserNameValidator());
 	}
 
 }

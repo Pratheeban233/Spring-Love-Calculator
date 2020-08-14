@@ -1,7 +1,6 @@
 package com.prathi.lc.dto;
 
 public class Phone {
-
 		String countryCode;
 		String userNumber;
 		
@@ -21,7 +20,4 @@ public class Phone {
 		public String toString() {
 			return getCountryCode()+"-"+getUserNumber();
 		}
-		
-		
-		
 }

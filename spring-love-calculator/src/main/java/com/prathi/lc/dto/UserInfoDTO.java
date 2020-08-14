@@ -8,28 +8,30 @@ public class UserInfoDTO {
 
 	// Server Side Validations below
 
-	@NotBlank(message = "* Your Name cannot be blank")
-	@Size(min = 3, max = 15, message = "* Your Name should have characters between 3-15")
-	private String yourName;
+	//@NotBlank(message = "* Your Name cannot be blank")
+	//@Size(min = 3, max = 15, message = "* Your Name should have characters between 3-15")
+	private String userName;
 
 	@NotBlank(message = "* Crush Name cannot be blank")
-	@Size(min = 3, max = 15, message = "* Crush Name should have characters between 3-15")
+	@Size(min = 3, max = 15, message = "{crushName.size.validate}")
 	private String crushName;
 
 	@AssertTrue(message = "* You should agree to use this app")
 	private boolean termsAndCondition;
 
-	public String getYourName() {
-		return yourName;
+
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setYourName(String yourName) {
-		this.yourName = yourName;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getCrushName() {
 		return crushName;
 	}
+
 
 	public void setCrushName(String crushName) {
 		this.crushName = crushName;
@@ -45,8 +47,8 @@ public class UserInfoDTO {
 
 	@Override
 	public String toString() {
-		return "UserInfoDTO [yourName=" + yourName + ", crushName=" + crushName + ", termsAndCondition="
+		return "UserInfoDTO [userName=" + userName + ", crushName=" + crushName + ", termsAndCondition="
 				+ termsAndCondition + "]";
 	}
-
+	
 }

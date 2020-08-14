@@ -9,6 +9,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Registration Page</title>
+
+<style type="text/css">
+.error {
+	color: red;
+	position: fixed;
+	text-align: left;
+	margin-left: 30px;
+}
+</style>
+
 </head>
 <body>
 	<h1 align="center">Love Calculator - Registration</h1>
@@ -20,16 +30,19 @@
 			<p>
 				<label>Name :</label>
 				<form:input path="name" />
+				<form:errors path="name" cssClass="error" />
 			</p>
 
 			<p>
 				<label>User Name:</label>
 				<form:input path="userName" />
+				<form:errors path="userName" cssClass="error" />
 			</p>
 
 			<p>
 				<label>Password:</label>
 				<form:password path="password" />
+				<form:errors path="password" cssClass="error" />
 			</p>
 
 			<p>
@@ -43,11 +56,11 @@
 			</p>
 			<p>
 				<label>Hobbies:</label>
-				<form:checkbox path="hobbies" value="1.programming" />
+				<form:checkbox path="hobbies" value="programming" />
 				Programming
-				<form:checkbox path="hobbies" value="2.pubg" />
+				<form:checkbox path="hobbies" value="pubg" />
 				PUBG
-				<form:checkbox path="hobbies" value="3.cricket" />
+				<form:checkbox path="hobbies" value="cricket" />
 				Cricket
 			</p>
 			<p>
@@ -56,14 +69,22 @@
 				Female
 				<form:radiobutton path="gender" value="Female" />
 			</p>
+			<p>
+				<label>Age:</label>
+				<form:input path="age" />
+				<form:errors path="age" cssClass="error" />
+			</p>
 
 			<h3>Communication</h3>
 			<p>
 				<label>Email:</label>
-				<form:input path="CommunicationDTO.email" />
-				
+				<form:input path="communicationDTO.email" />
+				<form:errors path="communicationDTO.email" cssClass="error" />
+			</p>
+			<p>
 				<label>Phone:</label>
-				<form:input path="CommunicationDTO.phone" />
+				<form:input path="communicationDTO.phone" />
+				<form:errors path="communicationDTO.phone" cssClass="error" />
 			</p>
 
 			<input type="submit" value="Register">

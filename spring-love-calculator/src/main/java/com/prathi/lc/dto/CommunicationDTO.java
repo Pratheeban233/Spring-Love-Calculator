@@ -1,8 +1,14 @@
 package com.prathi.lc.dto;
 
-public class CommunicationDTO {
+import javax.validation.constraints.Email;
 
+import com.prathi.lc.annotation.Mobile;
+
+public class CommunicationDTO {
+	
+	//@Email(regexp = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$", message = "{validate.email.message}")
 	private String email;
+	@Mobile 
 	private Phone phone;
 	
 	public String getEmail() {

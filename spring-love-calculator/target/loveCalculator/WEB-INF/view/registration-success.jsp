@@ -26,7 +26,7 @@
 	
 	 <br>
 	Gender:  ${userRegistrationInfo.gender } <br>
-	
+	Age: ${userRegistrationInfo.age }
 	<br>
 	<h3>Communication</h3>
 	

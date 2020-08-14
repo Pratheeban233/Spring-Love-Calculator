@@ -35,7 +35,6 @@ public class LoveCalculatorApplicationInitilizer1 // implements WebApplicationIn
 		// Java based application configuration
 		AnnotationConfigWebApplicationContext webApplicationContext = new AnnotationConfigWebApplicationContext();
 		webApplicationContext.register(LoveCalculatorAppConfig.class);
-
 		// Create a dispatcher object
 		DispatcherServlet dispatcherServlet = new DispatcherServlet(webApplicationContext);
 
