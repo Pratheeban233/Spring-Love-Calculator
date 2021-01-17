@@ -23,7 +23,7 @@
 	</form:form>
 	<br>
 	<%-- <a href="/loveCalculator/sendEmail/${userInfo.userName}">Send the result to your email</a> --%>
-	<a href="/loveCalculator/sendEmail/${userInfo.userName}">Send the result to your email</a>
+	<a href="/loveCalculator/sendEmail">Send the result to your email</a>
 	
 </body>
 </html>

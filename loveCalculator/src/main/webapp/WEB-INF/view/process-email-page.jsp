@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<h1>Hi ${userInfo.userName} </h1>
 <h1>Email successfully sent to ${email.userEmail}</h1>
 
 </body>

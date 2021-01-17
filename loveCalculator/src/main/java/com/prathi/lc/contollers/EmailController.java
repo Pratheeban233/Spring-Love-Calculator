@@ -1,20 +1,18 @@
 package com.prathi.lc.contollers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.prathi.lc.pojo.EmailDTO;
 
 @Controller
 public class EmailController {
 	
-	@RequestMapping("/sendEmail/{userName}")
-	public String sendEmail(@PathVariable("userName") String user, @ModelAttribute("emailDto")EmailDTO emailDTO, Model model)
+	@RequestMapping("/sendEmail")
+	public String sendEmail(@ModelAttribute("emailDto")EmailDTO emailDTO)
 	{
-		model.addAttribute("user", user);
 		return "send-email-page";
 	}
 
